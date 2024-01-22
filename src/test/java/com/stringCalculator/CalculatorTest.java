@@ -45,6 +45,22 @@ public class CalculatorTest {
 	public void shouldAllowNewLineAsDelimiter() {
 		assertEquals(6,StringCalculator.add("1\n2,3"));
 	}
+	
+	
+
+	//	Task - 4: Support different delimiters
+	//	TODO: Allow custom delimiter by checking // in beginning of first line
+	@Test
+	public void shouldAllowCustomDelimiter() {
+		assertEquals(3,StringCalculator.add("//;\n1;2"));
+	}
+
+	//	TODO: Custom Delimiter can be custom Regex Character
+	@Test
+	public void shouldAllowRegexCharAsCustomDelimiter() {
+		assertEquals(3,StringCalculator.add("//.\n1.2"));
+	}
+
 
 
 }

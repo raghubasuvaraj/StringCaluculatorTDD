@@ -18,4 +18,10 @@ public class CalculatorTest {
 		assertEquals(0, StringCalculator.add(""));
 	}
 
+	// TODO: for single string it will return same string
+	@Test
+	public void shouldReturnNumberOnSingleString() {
+		assertEquals(1, StringCalculator.add("1"));
+	}
+
 }

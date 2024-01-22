@@ -23,5 +23,11 @@ public class CalculatorTest {
 	public void shouldReturnNumberOnSingleString() {
 		assertEquals(1, StringCalculator.add("1"));
 	}
+	
+	// TODO: for two strings separated by commas it will return sum of the two
+	@Test
+	public void shouldReturnSumOfNumbersOnTwoStrings() {
+		assertEquals(3, StringCalculator.add("1,2"));
+	}
 
 }

@@ -63,4 +63,26 @@ public class CalculatorTest {
 
 
 
+	//	Task - 5: Throw Exception for negative numbers
+	//	TODO: Throw exception for negative numbers
+	@Test
+	public void shouldThrowExceptionForNegativeNumbers() {
+		try{
+			StringCalculator.add("1,-2,3");
+			fail("Exception expected");
+		}catch(RuntimeException e) {
+		}
+	}
+
+	//	TODO: Exception message should have negative number
+	@Test
+	public void shouldHaveNegativeNumbersInException() {
+		try{
+			StringCalculator.add("-1,-2,3");
+			fail("Exception expected");
+		}catch(RuntimeException e) {
+			assertEquals("negatives not allowed: -1, -2",e.getMessage());
+		}
+	}
+
 }

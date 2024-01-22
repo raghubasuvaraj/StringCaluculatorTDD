@@ -6,6 +6,7 @@ import java.util.regex.Pattern;
 
 public class StringCalculator {
 	
+	// Add Functionality
 	public static int add(String numbers) {
 		String[] num = splitter(numbers);
 		int size=num.length;
@@ -13,6 +14,7 @@ public class StringCalculator {
 		return findSum(num, size);
 	}
 
+	// Negative Exception Handling
 	private static void throwExceptionIfAnyNegative(String[] num, int size) {
 		ArrayList<String> negative = new ArrayList<String>();
 		for(int i=0; i<size; i++) {
@@ -25,6 +27,7 @@ public class StringCalculator {
 		}
 	}
 
+	//Find Sum Functionality
 	private static int findSum(String[] num, int size) {
 		int sum=0;
 		for(int i=0; i<size; i++){
@@ -33,6 +36,7 @@ public class StringCalculator {
 		return sum;
 	}
 
+	// Splitter Checking
 	private static String[] splitter(String numbers) {
 		if(numbers.isEmpty()) {
 			return new String[0];
